@@ -1,5 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
+#include "LevelLoader.h"
 
 class Entity;
 
@@ -22,7 +23,8 @@ private:
 	RenderWindow* m_pWindow = nullptr;
 
 	//entity
-	Entity* m_pGround = nullptr;
 	Entity* m_pPlayerDemo = nullptr;
+
+	LevelLoader m_LevelLoader;
 };
 

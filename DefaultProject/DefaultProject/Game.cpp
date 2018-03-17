@@ -7,6 +7,7 @@
 #include "Entity.h"
 #include "Player.h"
 
+
 using namespace std;
 using namespace sf;
 
@@ -17,13 +18,17 @@ Game::Game()
 	//m_pWindow->setVerticalSyncEnabled(true);
 
 	//create ground
-	m_pGround = new Entity(500, 32, { 500, 800 }, 1, true);
 	m_pPlayerDemo = new Player(32, { 100, 0 });
+
+	//level loader test
+	
+	m_LevelLoader.LoadLevel("Resources/Levels/test.csv");
 }
 
 Game::~Game()
 {
-
+	delete m_pPlayerDemo;
+	m_pPlayerDemo = nullptr;
 }
 
 void Game::Run()
@@ -71,15 +76,23 @@ void Game::Update(float deltaTime)
 
 
 	//update world
-	WorldManager::GetInstance().GetWorld()->Step(deltaTime, 10, 10);
-	m_pGround->Update(deltaTime);
+	WorldManager::GetInstance().GetWorld()->Step(deltaTime, 20, 20);
+
 	m_pPlayerDemo->Update(deltaTime);
+
+	for(Entity* p : m_LevelLoader.m_pEntities)
+	{
+		p->Update(deltaTime);
+	}
 }
 
 void Game::Draw()
 {
 	m_pWindow->clear();
-	m_pGround->Draw(m_pWindow);
 	m_pPlayerDemo->Draw(m_pWindow);
+	for (Entity* p : m_LevelLoader.m_pEntities)
+	{
+		p->Draw(m_pWindow);
+	}
 	m_pWindow->display();
 }

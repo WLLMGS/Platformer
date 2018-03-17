@@ -19,7 +19,7 @@ void WorldManager::Update(float elapsedSec)
 WorldManager::WorldManager()
 {
 	cout << "instance made\n";
-	m_pWorld = new b2World(b2Vec2(0.0f, 1000));
+	m_pWorld = new b2World(b2Vec2(0.0f, 9.81f));
 }
 
 

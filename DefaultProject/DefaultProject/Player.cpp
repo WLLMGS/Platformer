@@ -6,12 +6,14 @@
 Player::Player(const float halfSize, const Vector2f& pos) :
 Entity(halfSize, halfSize + halfSize / 4.f, pos)
 {
-	m_pBody->SetGravityScale(2.f);
+	m_pBody->SetGravityScale(100.f);
+	m_pBody->SetLinearDamping(0.5f);
 
 	m_pAnimator = new Animator(12, 6);
 
 	m_Rectangle.setTexture(TextureManager::GetInstance().GetTexture(HERO_0));
 	m_Rectangle.setTextureRect({ 32, 0, 32, 32 });
+
 }
 
 Player::~Player()
@@ -63,13 +65,13 @@ void Player::HandleControls()
 	{
 		if(m_JumpTimer < 0.0f)
 		{
-			cout << "is pressed\n";
 			m_JumpTimer = m_JumpCooldown;
-			velocity.y += -(m_Speed * 10000);
+			velocity.y = -m_Speed * 100.f;
 		}
 	}
+
 	
 
-	m_pBody->SetLinearVelocity({ velocity.x, velocity.y});
+	m_pBody->SetLinearVelocity({ velocity.x, velocity.y });
 	
 }

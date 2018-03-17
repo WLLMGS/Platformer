@@ -9,11 +9,13 @@ Entity::Entity(const float width, const float height, const Vector2f& pos, int c
 	else bodyDef.type = b2_staticBody;
 	//bodyDef.type = (!isStatic) ? b2_dynamicBody : b2_staticBody;
 	bodyDef.position.Set(pos.x, pos.y);
-	bodyDef.allowSleep = false;
-	bodyDef.active = true;
-	bodyDef.linearDamping = 1.0f;
-	bodyDef.bullet = true;
+	//bodyDef.allowSleep = false;
+	//bodyDef.active = true;
+	bodyDef.linearDamping = 0.1f;
+	//bodyDef.bullet = true;
 	
+	
+
 	int id = 1;
 	m_pBody = world->CreateBody(&bodyDef);
 	m_pBody->SetUserData((void*)id);
@@ -26,8 +28,8 @@ Entity::Entity(const float width, const float height, const Vector2f& pos, int c
 
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &box;
-	fixtureDef.density = 0.f;
-	fixtureDef.friction = 0.9f;
+	fixtureDef.density = .001f;
+	fixtureDef.friction = 0.5f;
 	fixtureDef.restitution = 0.f;
 	
 
