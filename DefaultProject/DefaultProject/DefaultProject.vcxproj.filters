@@ -16,21 +16,18 @@
     <Filter Include="Box2D">
       <UniqueIdentifier>{a2ca5660-0150-4a29-9af2-c3d40ebc4856}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{bbf17c9f-acd5-478b-b90a-66861cd08c5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{bcb218aa-6972-4f2b-8876-13426576fed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{15526018-30e1-41a4-a17d-0b3c8c7a2d95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="WorldManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Animator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Entity.cpp">
@@ -180,18 +177,48 @@
     <ClCompile Include="LevelLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BaseComponent.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TransformComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBodyComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerPrefab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TilePrefab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="WorldManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Animator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
@@ -342,6 +369,42 @@
       <Filter>Box2D</Filter>
     </ClInclude>
     <ClInclude Include="LevelLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseComponent.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBodyComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerPrefab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TilePrefab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

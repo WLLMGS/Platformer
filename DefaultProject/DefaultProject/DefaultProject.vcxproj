@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{1D6119F6-E320-4D3C-8233-079542A975D9}</ProjectGuid>
     <RootNamespace>DefaultProject</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Animator.cpp" />
+    <ClCompile Include="BaseComponent.cpp" />
     <ClCompile Include="Box2D\Collision\b2BroadPhase.cpp" />
     <ClCompile Include="Box2D\Collision\b2CollideCircle.cpp" />
     <ClCompile Include="Box2D\Collision\b2CollideEdge.cpp" />
@@ -172,14 +173,23 @@
     <ClCompile Include="Box2D\Rope\b2Rope.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerPrefab.cpp" />
+    <ClCompile Include="RectangleComponent.cpp" />
+    <ClCompile Include="RigidBodyComponent.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="TestScene.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TilePrefab.cpp" />
+    <ClCompile Include="TransformComponent.cpp" />
     <ClCompile Include="WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animator.h" />
+    <ClInclude Include="BaseComponent.h" />
     <ClInclude Include="Box2D\Box2D.h" />
     <ClInclude Include="Box2D\Collision\b2BroadPhase.h" />
     <ClInclude Include="Box2D\Collision\b2Collision.h" />
@@ -229,9 +239,17 @@
     <ClInclude Include="Box2D\Rope\b2Rope.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="LevelLoader.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerPrefab.h" />
+    <ClInclude Include="RectangleComponent.h" />
+    <ClInclude Include="RigidBodyComponent.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="TestScene.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TilePrefab.h" />
+    <ClInclude Include="TransformComponent.h" />
     <ClInclude Include="WorldManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

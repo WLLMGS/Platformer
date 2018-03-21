@@ -3,9 +3,7 @@
 #include <iostream>
 #include "SFML/Graphics.hpp"
 #include "Box2D/Box2D.h"
-#include "WorldManager.h"
-#include "Entity.h"
-#include "Player.h"
+#include "TestScene.h"
 
 
 using namespace std;
@@ -17,18 +15,13 @@ Game::Game()
 
 	//m_pWindow->setVerticalSyncEnabled(true);
 
-	//create ground
-	m_pPlayerDemo = new Player(32, { 100, 0 });
-
-	//level loader test
-	
-	m_LevelLoader.LoadLevel("Resources/Levels/test.csv");
+	m_pTestScene = new TestScene();
 }
 
 Game::~Game()
 {
-	delete m_pPlayerDemo;
-	m_pPlayerDemo = nullptr;
+	delete m_pTestScene;
+	m_pTestScene = nullptr;
 }
 
 void Game::Run()
@@ -74,25 +67,13 @@ void Game::Update(float deltaTime)
 	//	break;
 	//}
 
-
-	//update world
-	WorldManager::GetInstance().GetWorld()->Step(deltaTime, 20, 20);
-
-	m_pPlayerDemo->Update(deltaTime);
-
-	for(Entity* p : m_LevelLoader.m_pEntities)
-	{
-		p->Update(deltaTime);
-	}
+	m_pTestScene->RootUpdate(deltaTime);
+	
 }
 
 void Game::Draw()
 {
 	m_pWindow->clear();
-	m_pPlayerDemo->Draw(m_pWindow);
-	for (Entity* p : m_LevelLoader.m_pEntities)
-	{
-		p->Draw(m_pWindow);
-	}
+	m_pTestScene->RootDraw(m_pWindow);
 	m_pWindow->display();
 }

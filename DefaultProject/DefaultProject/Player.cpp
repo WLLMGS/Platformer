@@ -4,14 +4,14 @@
 #include "TextureManager.h"
 
 Player::Player(const float halfSize, const Vector2f& pos) :
-Entity(halfSize, halfSize + halfSize / 4.f, pos)
+Entity(halfSize, halfSize, pos)
 {
 	m_pBody->SetGravityScale(100.f);
 	m_pBody->SetLinearDamping(0.5f);
 
 	m_pAnimator = new Animator(12, 6);
 
-	m_Rectangle.setTexture(TextureManager::GetInstance().GetTexture(HERO_0));
+	//m_Rectangle.setTexture(TextureManager::GetInstance().GetTexture(HERO_0));
 	m_Rectangle.setTextureRect({ 32, 0, 32, 32 });
 
 }
@@ -47,7 +47,7 @@ void Player::HandleControls()
 {
 	b2Vec2 velocity{};
 
-	velocity.x = 0;
+	velocity.x = m_pBody->GetLinearVelocity().x;
 	velocity.y = m_pBody->GetLinearVelocity().y;
 
 	if(Keyboard::isKeyPressed(Keyboard::Q))

@@ -2,6 +2,8 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include "Scene.h"
+#include "TilePrefab.h"
 
 using namespace std;
 
@@ -14,7 +16,7 @@ LevelLoader::~LevelLoader()
 	}
 }
 
-void LevelLoader::LoadLevel(const std::string path)
+void LevelLoader::LoadLevel(const std::string path, wg::Scene* scene)
 {
 	//csv
 	ifstream file;
@@ -43,8 +45,9 @@ void LevelLoader::LoadLevel(const std::string path)
 				else if (element == "P")
 				{
 					cout << "P";
-					auto e = new Entity(tilesize / 2.0f, { x * tilesize, y * tilesize }, 1, true);
-					m_pEntities.push_back(e);
+					//auto e = new Entity(tilesize / 2.0f, { x * tilesize, y * tilesize }, 1, true);
+					//m_pEntities.push_back(e);
+					scene->AddChild(new TilePrefab({ x * 64.f, y * 64.f }));
 				}
 				++x;
 			}

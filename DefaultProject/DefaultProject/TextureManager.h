@@ -7,7 +7,11 @@ using namespace sf;
 using namespace std;
 enum TextureType
 {
-	HERO_0
+	HERO_0,
+	ROCK_0,
+	ROCK_1,
+	ROCK_2,
+	ROCK_3
 };
 
 class TextureManager

@@ -1,3 +1,9 @@
-﻿  Game.cpp
+﻿  TilePrefab.cpp
+  TextureManager.cpp
+  Generating Code...
+  Compiling...
+  RectangleComponent.cpp
+  Player.cpp
+  Generating Code...
   DefaultProject.vcxproj -> D:\Game Projects\Platformer\DefaultProject\Debug\DefaultProject.exe
   DefaultProject.vcxproj -> D:\Game Projects\Platformer\DefaultProject\Debug\DefaultProject.pdb (Partial PDB)

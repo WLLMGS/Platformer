@@ -19,7 +19,10 @@ Texture* TextureManager::GetTexture(const TextureType& type)
 TextureManager::TextureManager()
 {
 	AddTexture(HERO_0, "Resources/Character.png");
-
+	AddTexture(ROCK_0, "Resources/rock.png");
+	AddTexture(ROCK_1, "Resources/rock2.png");
+	AddTexture(ROCK_2, "Resources/rock3.png");
+	AddTexture(ROCK_3, "Resources/rock4.png");
 }
 
 

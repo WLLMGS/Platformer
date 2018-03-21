@@ -15,7 +15,6 @@ Entity::Entity(const float width, const float height, const Vector2f& pos, int c
 	//bodyDef.bullet = true;
 	
 	
-
 	int id = 1;
 	m_pBody = world->CreateBody(&bodyDef);
 	m_pBody->SetUserData((void*)id);
